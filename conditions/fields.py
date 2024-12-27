@@ -3,11 +3,16 @@
 :Author: Lucas Connors
 
 """
-
+import django
 from django import forms
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
-from jsonfield.fields import JSONField, JSONFormField, JSONWidget
+
+if django.VERSION >= (3, 1):
+    from django.db.models import JSONField
+else:
+    from jsonfield.fields import JSONField
+from jsonfield.fields import JSONFormField, JSONWidget
 
 from .conditions import CompareCondition
 from .exceptions import InvalidConditionError
