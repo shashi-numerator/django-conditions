@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-conditions"
-version = "0.9.18"
+version = "0.9.19"
 description = "A Django app that allows creation of conditional logic in admin."
 authors = ["Lucas Connors <lucas@revolutiontech.ca>"]
 license = "ISC"
@@ -16,6 +16,9 @@ classifiers = [
     "Framework :: Django :: 3.0",
     "Framework :: Django :: 3.1",
     "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Topic :: Internet :: WWW/HTTP",
@@ -24,7 +27,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-Django = ">= 2.2, < 4.0a0"
+Django = ">= 2.2, < 4.3"
 django-jsonfield = "^1.1"
 
 [tool.poetry.dev-dependencies]
@@ -35,7 +38,7 @@ profile = "black"
 
 [tool.black]
 line-length = 88
-target_version = ["py37", "py38"]
+target_version = ["py37", "py38","py39"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
